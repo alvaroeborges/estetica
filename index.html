@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetCar Estética Automotiva | Desde 2020</title>
+    <meta name="description"
+        content="JetCar Estética Automotiva em Uberlândia-MG. Lavagem detalhada, polimento técnico, vitrificação de pintura e proteção premium para o seu carro.">
+
+    <!-- Fontes: Anton para títulos de impacto, Inter para leitura -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#topo" class="brand">
+                <img src="./assets/jetcar.png" alt="JetCar Estética Automotiva" class="brand__logo">
+                <span class="brand__text">
+                    <strong><i><span class="jet">JET</span>CAR</i></strong>
+                    <small>ESTÉTICA AUTOMOTIVA</small>
+                </span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5534996719170" target="_blank" rel="noopener"
+                class="btn btn--primary btn--small header__cta">
+                Agendar
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="topo">
+        <div class="hero__bg">
+            <img src="https://images.unsplash.com/photo-1528597469186-bddab681a37f?auto=format&fit=crop&w=1800&q=80"
+                alt="Carro esportivo escuro detalhado" class="hero__img">
+            <div class="hero__overlay"></div>
+            <!-- Faixa de brilho: o elemento de assinatura visual, simula o "reflexo" de um polimento -->
+            <div class="hero__shine" aria-hidden="true"></div>
+        </div>
+
+        <div class="container hero__content">
+            <span class="eyebrow">Uberlândia · MG · Desde 2020</span>
+            <h1 class="hero__title">
+                <i><span class="jet">JET</span>CAR</i><br>SEU CARRO MERECE<br>
+                OUTRO NÍVEL <span class="text-red"><i>DE BRILHO</i></span>
+            </h1>
+            <p class="hero__subtitle">
+                Lavagem detalhada, polimento técnico e vitrificação de pintura com acabamento de vitrine.
+                Cuidado de verdade, do jeito que o seu carro merece.
+            </p>
+            <div class="hero__actions">
+                <a href="https://wa.me/5534996719170" target="_blank" rel="noopener" class="btn btn--primary">
+                    <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                        <path
+                            d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.6.9-.8 1.1-.1.2-.3.2-.5.1-1.5-.6-2.5-1.1-3.5-2.6-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z" />
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2z" />
+                    </svg>
+                    Agendar pelo WhatsApp
+                </a>
+                <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="hero__scroll" aria-hidden="true"><span></span></div>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <!-- ===== FAIXA EM MOVIMENTO (estilo friso cromado) ===== -->
+    <div class="marquee">
+        <div class="marquee__track" id="marqueeTrack">
+            <span>POLIMENTO TÉCNICO</span><span>✦</span>
+            <span>VITRIFICAÇÃO DE PINTURA</span><span>✦</span>
+            <span>HIGIENIZAÇÃO INTERNA</span><span>✦</span>
+            <span>ENCERAMENTO IMPORTADO</span><span>✦</span>
+            <span>PROTEÇÃO DE VIDROS</span><span>✦</span>
+            <span>LAVAGEM DETALHADA</span><span>✦</span>
+        </div>
+    </div>
+
+    <!-- ===== SOBRE / DIFERENCIAIS ===== -->
+    <section class="about" id="sobre">
+        <div class="container about__grid">
+            <div class="about__media reveal">
+                <img src="https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=900&q=80"
+                    alt="Profissional aplicando cera no capô do carro">
+                <div class="about__badge">
+                    <span class="about__year" id="yearsCount">0</span>
+                    <small>anos de estrada</small>
+                </div>
+            </div>
+            <div class="about__text reveal">
+                <span class="eyebrow">Sobre a JetCar</span>
+                <h2 class="section-title">Paixão por carros, <span class="text-red">obsessão por detalhes</span></h2>
+                <p>
+                    Desde 2020 a JetCar Estética Automotiva cuida de carros em Uberlândia com uma missão simples:
+                    entregar um acabamento que impressiona no primeiro olhar e protege por muito mais tempo.
+                    Trabalhamos com produtos premium, técnica apurada e o cuidado de quem trata cada carro como se fosse
+                    o próprio.
+                </p>
+
+                <ul class="checklist">
+                    <li>Produtos e insumos premium homologados</li>
+                    <li>Equipe especializada em estética automotiva</li>
+                    <li>Orçamento sem compromisso, direto pelo WhatsApp</li>
+                    <li>Atendimento em Uberlândia e região</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">O que fazemos</span>
+                <h2 class="section-title">Serviços feitos para durar</h2>
+                <p class="section-desc">Do banho de loja ao acabamento de vitrine: cada etapa pensada para realçar e
+                    proteger a pintura do seu carro.</p>
+            </div>
+
+            <div class="services__grid">
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 3h4l1 3h4a2 2 0 012 2v10a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h1L7 3z" />
+                            <path d="M9 12h6M9 16h4" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Lavagem Detalhada</h3>
+                    <p>Lavagem técnica externa e interna, sem riscos, com produtos de pH neutro e secagem cuidadosa.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="7" />
+                            <path d="M12 5v0M12 19v0M5 12h0M19 12h0" stroke-linecap="round" />
+                            <circle cx="12" cy="12" r="2.4" />
+                        </svg>
+                    </div>
+                    <h3>Polimento Técnico</h3>
+                    <p>Remoção de micro-riscos, holograma e oxidação, devolvendo o brilho original da pintura.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l7 3v6c0 5-3.5 8.5-7 11-3.5-2.5-7-6-7-11V5l7-3z" />
+                        </svg>
+                    </div>
+                    <h3>Vitrificação de Pintura</h3>
+                    <p>Camada de proteção de longa duração contra raios UV, chuva ácida e sujeira do dia a dia.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 17h16M6 17V9a2 2 0 012-2h8a2 2 0 012 2v8" />
+                            <path d="M9 7V5h6v2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Higienização Interna</h3>
+                    <p>Limpeza profunda de bancos, forração, painel e ar-condicionado, eliminando ácaros e odores.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="4" width="14" height="16" rx="2" />
+                            <path d="M9 9h6M9 13h6M9 17h3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3>Enceramento Importado</h3>
+                    <p>Cera premium que realça a cor e cria uma camada extra de brilho e repelência à água.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3c3 3 6 6.5 6 10a6 6 0 01-12 0c0-3.5 3-7 6-10z" />
+                        </svg>
+                    </div>
+                    <h3>Hidrorepelente de Vidros</h3>
+                    <p>Tratamento que faz a água escorregar no para-brisa, melhorando a visibilidade em dias de chuva.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Resultado JetCar</span>
+                <h2 class="section-title">Cada carro, uma vitrine</h2>
+            </div>
+
+            <div class="gallery__grid">
+                <div class="gallery__item gallery__item--big reveal">
+                    <img src="https://images.unsplash.com/photo-1619431856706-ca2cc58258f6?auto=format&fit=crop&w=1000&q=80"
+                        alt="Carro esportivo branco polido">
+                </div>
+                <div class="gallery__item reveal">
+                    <img src="https://images.unsplash.com/photo-1694678505383-676d78ea3b96?auto=format&fit=crop&w=800&q=80"
+                        alt="Lavagem detalhada com esponja">
+                </div>
+                <div class="gallery__item reveal">
+                    <img src="https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?auto=format&fit=crop&w=800&q=80"
+                        alt="Interior de carro higienizado">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO / CTA ===== -->
+    <section class="contact" id="contato">
+        <div class="container contact__box reveal">
+            <span class="eyebrow">Vamos deixar seu carro brilhando!</span>
+            <h2 class="section-title">Fale com a JetCar agora</h2>
+            <p class="section-desc">Chame no WhatsApp e agende um horário, ou acompanhe os bastidores no Instagram.</p>
+
+            <div class="contact__actions">
+                <a href="https://wa.me/5534996719170" target="_blank" rel="noopener" class="btn btn--primary">
+                    <img src="./assets/whatsapp.png" alt="WhatsApp" class="icon">
+                    (34) 99671-9170
+                </a>
+                <a href="https://www.instagram.com/estetica_automotiva_jet_car/" target="_blank" rel="noopener"
+                    class="btn btn--ghost">
+                    <img src="./assets/instagram.png" alt="Instagram" class="icon">
+                    @estetica_automotiva_jet_car
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="#topo" class="brand">
+                <img src="./assets/jetcar.png" alt="JetCar" class="brand__logo brand__logo--small">
+                <span class="brand__text">
+                    <strong>JETCAR</strong>
+                    <small>ESTÉTICA AUTOMOTIVA</small>
+                </span>
+            </a>
+
+            <nav class="footer__nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="footer__social">
+
+            </div>
+        </div>
+        <p class="footer__copy">© <span id="currentYear"></span> JetCar Estética Automotiva · Uberlândia, MG</p>
+    </footer>
+
+    <!-- ===== BOTÃO FLUTUANTE DO WHATSAPP ===== -->
+    <a href="https://wa.me/5534996719170" target="_blank" rel="noopener" class="whatsapp-float"
+        aria-label="Falar no WhatsApp">
+        <img src="./assets/whatsapp.png" alt="WhatsApp" class="icon">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
