@@ -189,6 +189,7 @@ svg { fill: currentColor; }
   font-weight: 600;
   font-size: 0.92rem;
 }
+
 .nav a { position: relative; padding: 4px 0; }
 .nav a::after {
   content: "";
@@ -282,6 +283,8 @@ svg { fill: currentColor; }
   padding-top: 60px;
 }
 
+
+
 .hero__title {
   font-family: var(--font-display);
   font-weight: 400;
@@ -330,6 +333,66 @@ svg { fill: currentColor; }
   70%  { top: 22px; opacity: 0; }
   100% { top: 22px; opacity: 0; }
 }
+
+.testimonials {
+  padding: 110px 0;
+  background: var(--black-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.t-card {
+  background: var(--charcoal);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.t-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--red);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+.t-card__stars {
+  display: flex;
+  gap: 4px;
+  color: var(--red);
+  margin-bottom: 18px;
+}
+.t-card__stars svg { fill: var(--red); }
+
+.t-card blockquote {
+  color: var(--white);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.t-card figcaption {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+.t-card figcaption::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: var(--red);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 
 /* ==========================================================
    FAIXA EM MOVIMENTO (marquee estilo friso cromado)
@@ -434,11 +497,13 @@ svg { fill: currentColor; }
   border-bottom: 1px solid var(--line);
 }
 
-.services__grid {
+.services__grid  {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+
 
 .card {
   background: var(--charcoal);
@@ -470,6 +535,8 @@ svg { fill: currentColor; }
   stroke: var(--white);
   stroke-width: 1.7;
 }
+
+
 
 .card h3 {
   font-family: var(--font-display);
