@@ -8,16 +8,30 @@
     <meta name="description"
         content="JetCar Estética Automotiva em Uberlândia-MG. Lavagem detalhada, polimento técnico, vitrificação de pintura e proteção premium para o seu carro.">
 
-    <!-- Fontes: Anton para títulos de impacto, Inter para leitura -->
+    <!-- Fontes: Anton para títulos de impacto, Playfair Display para o toque premium, Inter para leitura -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <link rel="icon" href="./assets/jetcar.png">
+    <meta name="theme-color" content="#0a0a0b">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Sprite de ícones reutilizáveis -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-star" viewBox="0 0 24 24">
+                <path
+                    d="M12 2.5l2.98 6.53 7.17.68-5.4 4.87 1.6 7.06L12 17.9l-6.35 3.74 1.6-7.06-5.4-4.87 7.17-.68L12 2.5z" />
+            </symbol>
+        </defs>
+    </svg>
 
     <!-- ===== CABEÇALHO ===== -->
     <header class="header" id="header">
@@ -61,16 +75,19 @@
         </div>
 
         <div class="container hero__content">
-            
-            <h1 class="hero__title">
+            <span class="hero__eyebrow reveal">
+                <span class="hero__eyebrow-line" aria-hidden="true"></span>
+                Atendimento exclusivo · sob agendamento
+            </span>
+            <h1 class="hero__title reveal">
                 <i><span class="jet">JET</span>CAR</i><br>SEU CARRO MERECE<br>
-                OUTRO NÍVEL <span class="text-red"><i>DE BRILHO</i></span>
+                OUTRO NÍVEL <span class="text-red"><i class="hero__accent">de brilho</i></span>
             </h1>
-            <p class="hero__subtitle">
+            <p class="hero__subtitle reveal">
                 Lavagem detalhada, polimento técnico e vitrificação de pintura com acabamento de vitrine.
                 Cuidado de verdade, do jeito que o seu carro merece.
             </p>
-            <div class="hero__actions">
+            <div class="hero__actions reveal">
                 <a href="https://wa.me/5534996719170" target="_blank" rel="noopener" class="btn btn--primary">
                     <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
                         <path
@@ -82,26 +99,51 @@
                 </a>
                 <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
         </div>
         <div class="hero__scroll" aria-hidden="true"><span></span></div>
-        <br>
-        <br>
-        <br>
+    </section>
+
+    <!-- ===== BARRA DE CONFIANÇA (flutua sobre a base do hero) ===== -->
+    <section class="trust">
+        <div class="container trust__bar reveal">
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" class="trust__icon" aria-hidden="true">
+                    <path d="M12 2.5l7.5 3v6c0 5-3.2 8-7.5 10-4.3-2-7.5-5-7.5-10v-6l7.5-3z" />
+                    <path d="M9 12.2l2.1 2.1L15.5 10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Produtos e insumos importados</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" class="trust__icon" aria-hidden="true">
+                    <path d="M12 21s-7-4.35-9.5-9C.8 8.1 2.7 4.5 6.2 4.1c2-.2 3.6.8 5.8 3 2.2-2.2 3.8-3.2 5.8-3 3.5.4 5.4 4 3.7 7.9C19 16.65 12 21 12 21z" />
+                </svg>
+                <span>Cuidado obsessivo em cada detalhe</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" class="trust__icon" aria-hidden="true">
+                    <rect x="4" y="5" width="16" height="16" rx="2" />
+                    <path d="M8 3v4M16 3v4M4 10h16" stroke-linecap="round" />
+                </svg>
+                <span>Agendamento exclusivo, sem fila</span>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" class="trust__icon" aria-hidden="true">
+                    <path d="M12 3l2.2 4.6 5 .7-3.6 3.6.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.6 5-.7L12 3z" />
+                </svg>
+                <span>Garantia total de satisfação</span>
+            </div>
+        </div>
     </section>
 
     <!-- ===== FAIXA EM MOVIMENTO (estilo friso cromado) ===== -->
     <div class="marquee">
         <div class="marquee__track" id="marqueeTrack">
-            <span>POLIMENTO TÉCNICO</span><span>✦</span>
-            <span>VITRIFICAÇÃO DE PINTURA</span><span>✦</span>
-            <span>HIGIENIZAÇÃO INTERNA</span><span>✦</span>
-            <span>ENCERAMENTO IMPORTADO</span><span>✦</span>
-            <span>PROTEÇÃO DE VIDROS</span><span>✦</span>
-            <span>LAVAGEM DETALHADA</span><span>✦</span>
+            <span>POLIMENTO TÉCNICO</span><span>◆</span>
+            <span>VITRIFICAÇÃO DE PINTURA</span><span>◆</span>
+            <span>HIGIENIZAÇÃO INTERNA</span><span>◆</span>
+            <span>ENCERAMENTO IMPORTADO</span><span>◆</span>
+            <span>PROTEÇÃO DE VIDROS</span><span>◆</span>
+            <span>LAVAGEM DETALHADA</span><span>◆</span>
         </div>
     </div>
 
@@ -171,7 +213,8 @@
                     <p>Remoção de micro-riscos, holograma e oxidação, devolvendo o brilho original da pintura.</p>
                 </article>
 
-                <article class="card reveal">
+                <article class="card card--featured reveal">
+                    <span class="card__ribbon">Mais procurado</span>
                     <div class="card__icon">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 2l7 3v6c0 5-3.5 8.5-7 11-3.5-2.5-7-6-7-11V5l7-3z" />

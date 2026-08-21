@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ativarAnimacaoAoRolar();
   contarAnosDesde2020();
   mostrarAnoAtualNoRodape();
+  ativarBotoesMagneticos();
 });
 
 /* --------------------------------------------------------
@@ -122,4 +123,32 @@ function contarAnosDesde2020() {
 function mostrarAnoAtualNoRodape() {
   const elementoAno = document.getElementById("currentYear");
   elementoAno.textContent = new Date().getFullYear();
+}
+
+/* --------------------------------------------------------
+   6) BOTÕES MAGNÉTICOS
+   Ao passar o mouse perto de um botão, ele "puxa" levemente
+   na direção do cursor. Reforça a sensação de um site feito
+   sob medida, com atenção a cada detalhe.
+-------------------------------------------------------- */
+function ativarBotoesMagneticos() {
+  const temMousePreciso = window.matchMedia("(pointer: fine)").matches;
+  const prefereMenosMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!temMousePreciso || prefereMenosMovimento) return;
+
+  const botoes = document.querySelectorAll(".btn");
+  const forcaDoIma = 0.25;
+
+  botoes.forEach(function (botao) {
+    botao.addEventListener("mousemove", function (evento) {
+      const area = botao.getBoundingClientRect();
+      const deslocamentoX = (evento.clientX - area.left - area.width / 2) * forcaDoIma;
+      const deslocamentoY = (evento.clientY - area.top - area.height / 2) * forcaDoIma;
+      botao.style.transform = "translate(" + deslocamentoX + "px, " + deslocamentoY + "px)";
+    });
+
+    botao.addEventListener("mouseleave", function () {
+      botao.style.transform = "";
+    });
+  });
 }
