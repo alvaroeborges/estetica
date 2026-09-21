@@ -1,6 +1,6 @@
 /* ==========================================================
    JETCAR ESTÉTICA AUTOMOTIVA
-   Paleta: preto profundo + vermelho de assinatura + dourado
+   Paleta: preto profundo + laranja de assinatura (RDC)
    como acento de exclusividade. Tipografia: Anton (impacto),
    Playfair Display itálico (acento premium), Inter (leitura).
    ========================================================== */
@@ -13,14 +13,14 @@
   --line:         rgba(255, 255, 255, 0.06);
   --line-strong:  rgba(255, 255, 255, 0.12);
 
-  --red:          #d81b23;
-  --red-dark:     #7c0c12;
-  --red-glow:     rgba(216, 27, 35, 0.28);
+  --red:          #e8540c;
+  --red-dark:     #8a3208;
+  --red-glow:     rgba(232, 84, 12, 0.28);
 
-  --gold:         #c9a24d;
-  --gold-soft:    #e8d2a0;
-  --gold-dark:    #8a6a24;
-  --gold-glow:    rgba(201, 162, 77, 0.28);
+  --gold:         #ff9142;
+  --gold-soft:    #ffc79c;
+  --gold-dark:    #b25a1a;
+  --gold-glow:    rgba(255, 145, 66, 0.28);
 
   --white:        #f5f4f1;
   --grey:         #9a9a9f;
