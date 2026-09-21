@@ -1,5 +1,5 @@
 /* ==========================================================
-   JETCAR ESTÉTICA AUTOMOTIVA — script.js
+   RDC REAL DETAIL CAR — script.js
    JavaScript simples, dividido em pequenas funções.
    Cada função cuida de UMA coisa só, para facilitar o entendimento.
    ========================================================== */
@@ -89,7 +89,7 @@ function ativarAnimacaoAoRolar() {
 
 /* --------------------------------------------------------
    4) CONTADOR DE ANOS DESDE 2020
-   Calcula quantos anos a JetCar já tem de estrada e anima
+   Calcula quantos anos a RDC já tem de estrada e anima
    o número subindo de 0 até o valor final.
 -------------------------------------------------------- */
 function contarAnosDesde2020() {
