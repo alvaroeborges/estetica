@@ -12,7 +12,72 @@ document.addEventListener("DOMContentLoaded", function () {
   contarAnosDesde2020();
   mostrarAnoAtualNoRodape();
   ativarBotoesMagneticos();
+  duplicarFaixaEmMovimento();
+  ativarAbasDoCatalogo();
 });
+
+/* --------------------------------------------------------
+   7) ABAS DO CATÁLOGO
+   Mostra um painel por vez (Pacotes, Lavagens...). Funciona
+   com clique e com o teclado (setas, Home e End). Sem JS, os
+   painéis ficam todos visíveis, então o conteúdo nunca some.
+-------------------------------------------------------- */
+function ativarAbasDoCatalogo() {
+  const catalogo = document.getElementById("catalogo");
+  if (!catalogo) return;
+
+  const abas = Array.from(catalogo.querySelectorAll(".catalog__tab"));
+  if (!abas.length) return;
+
+  catalogo.classList.add("catalog--tabs");
+
+  function selecionar(indice, moverFoco) {
+    abas.forEach(function (aba, i) {
+      const ativa = i === indice;
+      const painel = document.getElementById(aba.getAttribute("aria-controls"));
+      aba.classList.toggle("is-active", ativa);
+      aba.setAttribute("aria-selected", ativa);
+      aba.tabIndex = ativa ? 0 : -1;
+      painel.hidden = !ativa;
+      if (ativa && moverFoco) aba.focus();
+    });
+  }
+
+  abas.forEach(function (aba, i) {
+    aba.addEventListener("click", function () {
+      selecionar(i, false);
+    });
+
+    aba.addEventListener("keydown", function (evento) {
+      let destino = null;
+      if (evento.key === "ArrowRight") destino = (i + 1) % abas.length;
+      if (evento.key === "ArrowLeft") destino = (i - 1 + abas.length) % abas.length;
+      if (evento.key === "Home") destino = 0;
+      if (evento.key === "End") destino = abas.length - 1;
+      if (destino === null) return;
+      evento.preventDefault();
+      selecionar(destino, true);
+    });
+  });
+
+  selecionar(0, false);
+}
+
+/* --------------------------------------------------------
+   0) FAIXA EM MOVIMENTO SEM PULO
+   O CSS anda metade da faixa (-50%), então o conteúdo precisa
+   estar duplicado. Fazemos a cópia aqui para não poluir o HTML.
+-------------------------------------------------------- */
+function duplicarFaixaEmMovimento() {
+  const faixa = document.getElementById("marqueeTrack");
+  if (!faixa) return;
+
+  Array.from(faixa.children).forEach(function (item) {
+    const copia = item.cloneNode(true);
+    copia.setAttribute("aria-hidden", "true");
+    faixa.appendChild(copia);
+  });
+}
 
 /* --------------------------------------------------------
    1) MENU MOBILE (hambúrguer)
@@ -74,6 +139,7 @@ function ativarAnimacaoAoRolar() {
       elementosVisiveis.forEach(function (item) {
         if (item.isIntersecting) {
           item.target.classList.add("is-visible");
+          liberarElementoAposRevelar(item.target);
           // Depois de animar uma vez, não precisamos mais observar o elemento
           observador.unobserve(item.target);
         }
@@ -87,13 +153,41 @@ function ativarAnimacaoAoRolar() {
   });
 }
 
+/* Quando a animação de entrada termina, tiramos as classes .reveal e
+   .is-visible. Assim o elemento volta a usar só o próprio CSS
+   (ex.: o efeito de hover dos cards, que a .reveal estava sobrescrevendo). */
+function liberarElementoAposRevelar(elemento) {
+  function aoTerminar(evento) {
+    if (evento.target !== elemento || evento.propertyName !== "opacity") return;
+    elemento.removeEventListener("transitionend", aoTerminar);
+    elemento.classList.remove("reveal", "is-visible");
+  }
+  elemento.addEventListener("transitionend", aoTerminar);
+}
+
 /* --------------------------------------------------------
    4) CONTADOR DE ANOS DESDE 2020
    Calcula quantos anos a RDC já tem de estrada e anima
-   o número subindo de 0 até o valor final.
+   o número subindo de 0 até o valor final. Só começa quando
+   o contador aparece na tela, senão a animação acabaria
+   antes de o visitante chegar na seção.
 -------------------------------------------------------- */
 function contarAnosDesde2020() {
   const elementoContador = document.getElementById("yearsCount");
+  if (!elementoContador) return;
+
+  const observador = new IntersectionObserver(
+    function (entradas) {
+      if (!entradas[0].isIntersecting) return;
+      observador.disconnect();
+      animarContador(elementoContador);
+    },
+    { threshold: 0.6 }
+  );
+  observador.observe(elementoContador);
+}
+
+function animarContador(elementoContador) {
   const anoDeFundacao = 2020;
   const anoAtual = new Date().getFullYear();
   const totalDeAnos = anoAtual - anoDeFundacao;

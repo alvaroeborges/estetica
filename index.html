@@ -8,14 +8,15 @@
     <meta name="description"
         content="RDC Real Detail Car em Uberlândia-MG. Lavagem detalhada, polimento técnico, vitrificação de pintura e proteção premium para o seu carro.">
 
-    <!-- Fontes: Anton para títulos de impacto, Playfair Display para o toque premium, Inter para leitura -->
+    <!-- Fontes: Anybody (títulos, largura e itálico variáveis, ecoa o logotipo), Instrument Serif (acento editorial),
+         Geist (leitura) e Geist Mono (rótulos técnicos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,100..150,600..900;1,100..150,600..900&family=Instrument+Serif:ital@0;1&family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
         rel="stylesheet">
 
-    <link rel="icon" href="./assets/logo-rdc.png">
+    <link rel="icon" href="./assets/813911953_18408486601081933_1785400128317606236_n.jpg">
     <meta name="theme-color" content="#0a0a0b">
 
     <link rel="stylesheet" href="style.css">
@@ -39,13 +40,15 @@
             <a href="#topo" class="brand">
                 <img src="./assets/813911953_18408486601081933_1785400128317606236_n.jpg" alt="RDC Real Detail Car" class="brand__logo">
                 <span class="brand__text">
-                    <strong><i><span class="jet">RDC</span></i></strong>
+                    <strong><i><span class="brand-accent">RDC</span></i></strong>
                     <small>REAL DETAIL CAR</small>
                 </span>
             </a>
 
             <nav class="nav" id="nav">
                 <a href="#servicos">Serviços</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#processo">Processo</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#galeria">Galeria</a>
                 <a href="#contato">Contato</a>
@@ -78,7 +81,7 @@
                 Atendimento exclusivo · sob agendamento
             </span>
             <h1 class="hero__title reveal">
-                <i><span class="jet">RDC</span></i><br>SEU CARRO MERECE<br>
+                <i><span class="brand-accent">RDC</span></i><br>SEU CARRO MERECE<br>
                 OUTRO NÍVEL <span class="text-red"><i class="hero__accent">de brilho</i></span>
             </h1>
             <p class="hero__subtitle reveal">
@@ -259,11 +262,410 @@
         </div>
     </section>
 
+    <!-- ===== CATÁLOGO ===== -->
+    <section class="catalog" id="catalogo">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Catálogo de serviços</span>
+                <h2 class="section-title">A diferença está <span class="text-red">nos detalhes</span></h2>
+                <p class="section-desc">Realce o brilho, o conforto e a proteção do seu carro com serviços pensados para
+                    quem valoriza qualidade. Valores sob consulta, após avaliação do veículo.</p>
+            </div>
+
+            <div class="catalog__tabs" role="tablist" aria-label="Categorias do catálogo">
+                <button type="button" class="catalog__tab is-active" role="tab" id="tab-pacotes" aria-controls="painel-pacotes" aria-selected="true" tabindex="0">Pacotes</button>
+                <button type="button" class="catalog__tab" role="tab" id="tab-lavagens" aria-controls="painel-lavagens" aria-selected="false" tabindex="-1">Lavagens</button>
+                <button type="button" class="catalog__tab" role="tab" id="tab-interior" aria-controls="painel-interior" aria-selected="false" tabindex="-1">Interior e motor</button>
+                <button type="button" class="catalog__tab" role="tab" id="tab-protecao" aria-controls="painel-protecao" aria-selected="false" tabindex="-1">Polimento e proteção</button>
+            </div>
+
+            <div class="catalog__panel" role="tabpanel" id="painel-pacotes" aria-labelledby="tab-pacotes">
+                <div class="catalog__grid">
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Pacote Bronze</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1 dia</span>
+                        </header>
+                        <p class="pack__desc">Pacote ideal para renovar o visual do veículo com ótimo custo-benefício, combinando lavagem completa, polimento comercial, higienização básica e revitalização de plásticos.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem completa</li>
+                            <li>Polimento comercial</li>
+                            <li>Revitalização de plásticos</li>
+                            <li>Hidratação rápida de couro</li>
+                            <li>Higienização interna básica</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Bronze." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Pacote Prata</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2 dias</span>
+                        </header>
+                        <p class="pack__desc">Combina brilho, proteção e cuidado interno e externo, incluindo polimento técnico, vitrificação parcial e hidratação de couro, garantindo acabamento uniforme e duradouro.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem detalhada</li>
+                            <li>Polimento técnico</li>
+                            <li>Vitrificação até 3 anos</li>
+                            <li>Hidratação de couro e limpeza do motor</li>
+                            <li>Cristalização de vidros</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Prata." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack pack--premium">
+                        <header class="pack__head">
+                            <h3>Pacote Ouro</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>3 dias</span>
+                        </header>
+                        <p class="pack__desc">Serviço completo com proteção duradoura e acabamento premium, incluindo lavagem detalhada, polimento técnico, vitrificação de longa duração e higienização interna completa.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem detalhada</li>
+                            <li>Polimento técnico profissional</li>
+                            <li>Vitrificação até 5 anos</li>
+                            <li>Higienização completa</li>
+                            <li>Cristalização de vidros</li>
+                            <li>Proteção cerâmica de rodas e plásticos</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Ouro." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack pack--premium">
+                        <header class="pack__head">
+                            <h3>Pacote Rubi</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>3 dias</span>
+                        </header>
+                        <p class="pack__desc">Cuidado completo com brilho de alta performance, combinando lavagem detalhada, polimento técnico, vitrificação, hidratação de couro e cristalização de vidros, com acabamento premium.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem detalhada</li>
+                            <li>Polimento técnico</li>
+                            <li>Vitrificação completa</li>
+                            <li>Hidratação de couro</li>
+                            <li>Cristalização de vidros</li>
+                            <li>Proteção de plásticos e rodas</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Rubi." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack pack--premium">
+                        <header class="pack__head">
+                            <h3>Pacote Diamante</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>3 dias</span>
+                        </header>
+                        <p class="pack__desc">Proteção cerâmica avançada com brilho intenso e toque premium, cuidando de pintura, plásticos, rodas e vidros, com nano proteção final de alta performance.</p>
+                        <ul class="pack__list">
+                            <li>Polimento técnico</li>
+                            <li>Vitrificação total da pintura</li>
+                            <li>Proteção cerâmica de plásticos e rodas</li>
+                            <li>Cristalização de vidros</li>
+                            <li>Hidratação de couro e higienização completa</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Diamante." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack pack--premium">
+                        <header class="pack__head">
+                            <h3>Pacote Diamante 2</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>3 dias</span>
+                        </header>
+                        <p class="pack__desc">Proteção nano cerâmica total, oferecendo cuidado máximo e duradouro, com polimento técnico, vitrificação completa e nano proteção em pintura, rodas, faróis e interior do veículo.</p>
+                        <ul class="pack__list">
+                            <li>Polimento técnico profissional</li>
+                            <li>Vitrificação total interna e externa</li>
+                            <li>Nano proteção de couro e tecidos</li>
+                            <li>Cristalização de vidros e faróis</li>
+                            <li>Proteção completa por até 5 anos</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Pacote%20Diamante%202." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="catalog__panel" role="tabpanel" id="painel-lavagens" aria-labelledby="tab-lavagens">
+                <div class="catalog__grid">
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Limpeza simples</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>50 min</span>
+                        </header>
+                        <p class="pack__desc">Remove sujeiras leves e poeira do dia a dia, mantendo o carro limpo, com brilho natural e aparência renovada, ideal para limpezas rápidas e manutenção diária.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem externa com shampoo neutro</li>
+                            <li>Secagem e acabamento</li>
+                            <li>Finalização com brilho instantâneo</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Limpeza%20simples." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Lavagem completa premium</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h10</span>
+                        </header>
+                        <p class="pack__desc">Limpeza interna e externa completa que devolve brilho e proteção à pintura, garantindo aspecto impecável e sensação de veículo cuidado e recém-lavado.</p>
+                        <ul class="pack__list">
+                            <li>Pré-lavagem profunda</li>
+                            <li>Limpeza interna e externa completa</li>
+                            <li>Cera protetora</li>
+                            <li>Brilha-pneus</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Lavagem%20completa%20premium." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Lavagem técnica avançada</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h30</span>
+                        </header>
+                        <p class="pack__desc">Remove impurezas difíceis, realça o brilho da pintura e garante acabamento premium, cuidando de cada detalhe com produtos especiais e técnicas profissionais.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem minuciosa com produtos premium</li>
+                            <li>Detalhamento de plásticos e borrachas</li>
+                            <li>Cera de longa duração</li>
+                            <li>Revitalização de pneus</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Lavagem%20t%C3%A9cnica%20avan%C3%A7ada." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Lavagem detalhada profissional</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2h</span>
+                        </header>
+                        <p class="pack__desc">Limpeza completa e detalhada, com proteção prolongada, brilho intenso e durabilidade, cuidando de pintura, plásticos e pneus com acabamento superior.</p>
+                        <ul class="pack__list">
+                            <li>Pré-lavagem profunda</li>
+                            <li>Limpeza detalhada interna e externa</li>
+                            <li>Aplicação de selante líquido</li>
+                            <li>Revitalização total de plásticos e pneus</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Lavagem%20detalhada%20profissional." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="catalog__panel" role="tabpanel" id="painel-interior" aria-labelledby="tab-interior">
+                <div class="catalog__grid">
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Higienização interna completa</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>3h</span>
+                        </header>
+                        <p class="pack__desc">Elimina manchas, odores e bactérias do interior, renovando bancos, carpetes e plásticos, deixando o veículo limpo, perfumado e saudável para todos os ocupantes.</p>
+                        <ul class="pack__list">
+                            <li>Aspiração completa</li>
+                            <li>Limpeza de bancos, portas e painéis</li>
+                            <li>Hidratação de plásticos e couro</li>
+                            <li>Aromatização final</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Higieniza%C3%A7%C3%A3o%20interna%20completa." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Tratamento de couro</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2h</span>
+                        </header>
+                        <p class="pack__desc">Restaura a maciez e o aspecto original do couro, prevenindo rachaduras e manchas, garantindo toque agradável, durabilidade e aparência premium em todo o interior.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza suave com produtos neutros</li>
+                            <li>Hidratação profunda</li>
+                            <li>Proteção contra manchas e desgaste</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Tratamento%20de%20couro." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Limpeza técnica de motor</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h</span>
+                        </header>
+                        <p class="pack__desc">Limpeza cuidadosa do motor, sem riscos aos componentes elétricos, preservando eficiência e aparência, com produtos especializados e técnicas de segurança avançadas.</p>
+                        <ul class="pack__list">
+                            <li>Isolamento das partes sensíveis</li>
+                            <li>Limpeza controlada a vapor</li>
+                            <li>Aplicação de verniz para motor</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Limpeza%20t%C3%A9cnica%20de%20motor." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Lavagem técnica para motos</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h</span>
+                        </header>
+                        <p class="pack__desc">Limpeza completa que mantém a moto com aparência de nova, cuidando de rodas, carenagens e pintura, com aplicação de selante protetor para durabilidade do acabamento.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem detalhada</li>
+                            <li>Limpeza de rodas, motor e carenagens</li>
+                            <li>Aplicação de selante protetor</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Lavagem%20t%C3%A9cnica%20para%20motos." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Lavagem de chassi</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h30</span>
+                        </header>
+                        <p class="pack__desc">Remove sujeiras e resíduos acumulados na parte inferior do veículo, prevenindo ferrugem e corrosão, com aplicação de protetor anticorrosivo e limpeza completa do chassi.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza do chassi e rodas</li>
+                            <li>Lavagem do escapamento</li>
+                            <li>Aplicação de protetor anticorrosivo</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Lavagem%20de%20chassi." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="catalog__panel" role="tabpanel" id="painel-protecao" aria-labelledby="tab-protecao">
+                <div class="catalog__grid">
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Polimento técnico</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>5h</span>
+                        </header>
+                        <p class="pack__desc">Corrige riscos leves e devolve o brilho original da pintura, com descontaminação e aplicação de cera selante, garantindo proteção e acabamento de alto padrão.</p>
+                        <ul class="pack__list">
+                            <li>Descontaminação da pintura</li>
+                            <li>Correção leve de verniz</li>
+                            <li>Aplicação de cera selante protetora</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Polimento%20t%C3%A9cnico." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Vitrificação de pintura</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2 dias</span>
+                        </header>
+                        <p class="pack__desc">Aplicação de revestimento cerâmico que protege a pintura e intensifica o brilho, proporcionando resistência a riscos e durabilidade de até cinco anos com acabamento impecável.</p>
+                        <ul class="pack__list">
+                            <li>Lavagem e descontaminação da pintura</li>
+                            <li>Polimento técnico</li>
+                            <li>Aplicação de vitrificador cerâmico</li>
+                            <li>Kit lavagem (shampoo neutro e luva de microfibra)</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Vitrifica%C3%A7%C3%A3o%20de%20pintura." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Enceramento manual</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2h30</span>
+                        </header>
+                        <p class="pack__desc">Renova o brilho da pintura e oferece proteção duradoura, com limpeza prévia, aplicação de cera premium e acabamento de alto brilho, garantindo visual impecável e cuidado total.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza e descontaminação</li>
+                            <li>Aplicação de cera premium</li>
+                            <li>Acabamento com brilho espelhado</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Enceramento%20manual." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Polimento de vidros</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1 dia</span>
+                        </header>
+                        <p class="pack__desc">Melhora visibilidade e repele água, aumentando a segurança em dias de chuva, com polimento e aplicação de cristalizador hidrofóbico de alta durabilidade e acabamento uniforme.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza e polimento dos vidros</li>
+                            <li>Aplicação de cristalizador hidrofóbico</li>
+                            <li>Proteção de até 12 meses</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Polimento%20de%20vidros." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Revitalização de faróis</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>2h</span>
+                        </header>
+                        <p class="pack__desc">Restaura transparência e brilho dos faróis, eliminando amarelado e desgastes, com polimento técnico e aplicação de selante UV, garantindo melhor iluminação e proteção prolongada.</p>
+                        <ul class="pack__list">
+                            <li>Polimento técnico dos faróis</li>
+                            <li>Aplicação de selante UV</li>
+                            <li>Proteção contra desgaste</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Revitaliza%C3%A7%C3%A3o%20de%20far%C3%B3is." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Coating de rodas</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h</span>
+                        </header>
+                        <p class="pack__desc">Proteção cerâmica que facilita a limpeza, evita acúmulo de sujeira e mantém o brilho das rodas, com aplicação especializada e durabilidade de até 12 meses.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza completa das rodas</li>
+                            <li>Aplicação de coating cerâmico</li>
+                            <li>Pintura de pinças</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Coating%20de%20rodas." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+
+                    <article class="pack">
+                        <header class="pack__head">
+                            <h3>Coating de plásticos</h3>
+                            <span class="pack__time"><svg viewBox="0 0 24 24" class="pack__clock" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="sr-only">Tempo médio: </span>1h</span>
+                        </header>
+                        <p class="pack__desc">Renova a cor e o brilho original dos plásticos, oferecendo proteção duradoura contra desgaste, com limpeza, descontaminação e aplicação de coating protetor de alta performance.</p>
+                        <ul class="pack__list">
+                            <li>Limpeza e descontaminação</li>
+                            <li>Aplicação de coating protetor</li>
+                            <li>Acabamento duradouro</li>
+                        </ul>
+                        <a href="https://wa.me/5534996719170?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%3A%20Coating%20de%20pl%C3%A1sticos." target="_blank" rel="noopener" class="pack__cta">Pedir orçamento <svg viewBox="0 0 24 24" class="pack__arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+                    </article>
+                </div>
+            </div>
+
+            <p class="catalog__note">Os tempos são médios e podem variar conforme o estado do veículo. Confirmamos tudo no orçamento.</p>
+        </div>
+    </section>
+
+    <!-- ===== PROCESSO ===== -->
+    <section class="process" id="processo">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Como trabalhamos</span>
+                <h2 class="section-title">Um processo pensado <span class="text-red">do início ao fim</span></h2>
+                <p class="section-desc">Cada carro passa pelas mesmas quatro etapas, sem atalhos, para que o
+                    resultado seja sempre o mesmo: acabamento de vitrine.</p>
+            </div>
+
+            <div class="process__steps">
+                <div class="step reveal">
+                    <span class="step__num">01</span>
+                    <h3>Avaliação</h3>
+                    <p>Analisamos a pintura, o interior e o estado geral do carro para indicar o serviço certo.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step__num">02</span>
+                    <h3>Preparação</h3>
+                    <p>Lavagem técnica e descontaminação da pintura, deixando a superfície pronta para receber o tratamento.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step__num">03</span>
+                    <h3>Execução</h3>
+                    <p>Polimento, vitrificação ou enceramento com produtos importados e técnica apurada.</p>
+                </div>
+                <div class="step reveal">
+                    <span class="step__num">04</span>
+                    <h3>Entrega</h3>
+                    <p>Inspeção final sob luz e entrega do carro com orientações para manter o brilho por mais tempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== GALERIA ===== -->
     <section class="gallery" id="galeria">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Resultado RDC</span>
+                <span class="eyebrow">Padrão RDC</span>
                 <h2 class="section-title">Cada carro, uma vitrine</h2>
             </div>
 
@@ -335,10 +737,17 @@
                     <img src="./assets/whatsapp.png" alt="WhatsApp" class="icon">
                     (34) 99671-9170
                 </a>
-                <a href="https://www.instagram.com/estetica_automotiva_jet_car/" target="_blank" rel="noopener"
+                <a href="https://www.instagram.com/rdc_studio_automotivo/" target="_blank" rel="noopener"
                     class="btn btn--ghost">
                     <img src="./assets/instagram.png" alt="Instagram" class="icon">
-                    @estetica_automotiva_jet_car
+                    @rdc_studio_automotivo
+                </a>
+                <a href="#catalogo" class="btn btn--ghost">
+                    <svg viewBox="0 0 24 24" class="icon icon--stroke" aria-hidden="true">
+                        <path d="M4 5.5A1.5 1.5 0 015.5 4H11v15H5.5A1.5 1.5 0 004 20.5v-15z" />
+                        <path d="M20 5.5A1.5 1.5 0 0018.5 4H13v15h5.5a1.5 1.5 0 011.5 1.5v-15z" />
+                    </svg>
+                    Ver catálogo
                 </a>
             </div>
         </div>
@@ -350,19 +759,36 @@
             <a href="#topo" class="brand">
                 <img src="./assets/813911953_18408486601081933_1785400128317606236_n.jpg" alt="RDC" class="brand__logo brand__logo--small">
                 <span class="brand__text">
-                    <strong><i><span class="jet">RDC</span></i></strong>
+                    <strong><i><span class="brand-accent">RDC</span></i></strong>
                     <small>REAL DETAIL CAR</small>
                 </span>
             </a>
 
             <nav class="footer__nav">
                 <a href="#servicos">Serviços</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#processo">Processo</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#galeria">Galeria</a>
                 <a href="#contato">Contato</a>
             </nav>
             <div class="footer__social">
-
+                <a href="https://wa.me/5534996719170" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+                        <path
+                            d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.6.9-.8 1.1-.1.2-.3.2-.5.1-1.5-.6-2.5-1.1-3.5-2.6-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z" />
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.5.8 3.2 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/rdc_studio_automotivo/" target="_blank" rel="noopener"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" class="icon icon--stroke" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" />
+                        <circle cx="12" cy="12" r="4" />
+                        <circle cx="17.3" cy="6.7" r="0.6" />
+                    </svg>
+                </a>
             </div>
         </div>
         <p class="footer__copy">© <span id="currentYear"></span> RDC Real Detail Car · Uberlândia, MG</p>
